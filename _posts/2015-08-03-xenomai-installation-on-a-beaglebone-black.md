@@ -24,6 +24,8 @@ There are two ways you can install Xenomai on the Beaglebone black:
 
 ### Xenomai installation: the easy way (3 steps)
 
+I discovered this method thanks to the Debian for Beaglebone black page [^4].
+
 **1. Install Debian on your Beaglebone**
 
 If you already have a recent Debian installed on your Beaglebone black, you can skip this step.
@@ -33,6 +35,7 @@ wget https://rcn-ee.com/rootfs/bb.org/release/2015-03-01/console/BBB-eMMC-flashe
 {%endhighlight%}
 
 Insert your SD card, for me it's under `dev/mmcblk0`
+
 {%highlight bash%}
 sudo -s
 xz -dkc BBB-eMMC-flasher-debian-7.8-console-armhf-2015-03-01-2gb.img.xz > /dev/mmcblk0
@@ -49,27 +52,35 @@ Now you're ready for the next step.
 **2. Update the Beaglebone's kernel to a Xenomai-patched version**
 
 SSH to your Beaglebone
+
 {%highlight bash%}
 ssh 192.168.7.2 -l debian
 {%endhighlight%}
 
 Then update and update the kernel
+
 {%highlight bash%}
 sudo apt-get update
 sudo apt-get install linux-image-3.8.13-xenomai-r72 linux-headers-3.8.13-xenomai-r72 linux-firmware-image-3.8.13-xenomai-r72
 {%endhighlight%}
 
 Now reboot and SSH back on the Beaglebone
+
 {%highlight bash%}
 sudo reboot
 ssh 192.168.7.2 -l debian
 {%endhighlight%}
 
 **3. Install Xenomai userspace bindings**
+
+Download Xenomai 2.6.X
+
 {%highlight bash%}
 wget http://download.gna.org/xenomai/stable/xenomai-2.6.3.tar.bz2
 tar xvjf xenomai-2.6.3.tar.bz2
 {%endhighlight%}
+
+Build and install it
 
 {%highlight bash%}
 cd xenomai-2.6.3
@@ -83,11 +94,13 @@ sudo make install
 ### Xenomai installation: the hard way (~15 steps)
 
 **1. Installing prerequisites**
+
 {%highlight bash%}
 sudo apt-get install u-boot-tools lzop build-essential libncurses5{,-dev} gcc-arm-linux-gnueabi git gparted
 {%endhighlight%}
 
 **2. Follow the Random Linux Hacks tutorial religiously**
+
 [https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/](https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/)
 
 The two main drawbacks of this method are:
@@ -98,11 +111,13 @@ The two main drawbacks of this method are:
 ### What's next ?
 
 You can test Xenomai by running this as root
+
 {%highlight bash%}
 /usr/xenomai/bin/latency
 {%endhighlight%}
 
 You should get something like this
+
 ![Xenomai latency test]({{ site.url }}/assets/media/xeno_latency_test.png)
 
 You'll notice the latency and jitter are - as expected and promised - in the order of microseconds.
@@ -110,14 +125,16 @@ Bear in mind that this is just a test and doesn't reflect the performance of Xen
 We shall test that later.
 
 You can go on and try other stuff under `/usr/xenomai/bin/`.
-Or you might try using the Xenomai userspace API [^4] to build a real-time application, I know that's one thing I'll be exploring.
+Or you might try using the Xenomai userspace API [^5] to build a real-time application, I know that's one thing I'll be exploring.
 
 ### References
 
-[^1]: Installing Xenomai on Beaglebone using Debian distribution from Random Linux Hacks [https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/](https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/)
+[^1]: Installing Xenomai on Beaglebone using Debian distribution [https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/](https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/)
 
-[^2]: Cross compiling kernels from Boundary devices [http://boundarydevices.com/cross-compiling-kernels-2014-edition-2/](http://boundarydevices.com/cross-compiling-kernels-2014-edition-2/)
+[^2]: Cross compiling kernels [http://boundarydevices.com/cross-compiling-kernels-2014-edition-2/](http://boundarydevices.com/cross-compiling-kernels-2014-edition-2/)
 
-[^3]: EBC Xenomai page from eLinux [http://elinux.org/EBC_Xenomai](http://elinux.org/EBC_Xenomai)
+[^3]: EBC Xenomai page [http://elinux.org/EBC_Xenomai](http://elinux.org/EBC_Xenomai)
 
-[^4]: Xenomai API reference [http://xenomai.org/api-reference/](http://xenomai.org/api-reference/)
+[^4]: Debian for Beaglebone black [http://elinux.org/Beagleboard:BeagleBoneBlack_Debian](http://elinux.org/Beagleboard:BeagleBoneBlack_Debian)
+
+[^5]: Xenomai API reference [http://xenomai.org/api-reference/](http://xenomai.org/api-reference/)
