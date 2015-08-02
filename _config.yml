@@ -5,26 +5,21 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: pygments
 markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Saladin's log
 
-description: Stylish Jekyll Theme
+description: My thoughts and notes about robotics, embedded software and hardware
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  name: Salah-Eddine Missri
+  email: syrianspock@gmail.com
+  github: syrianspock
+  bio: Amateur roboticist and tinkerer, studying Robotics in Lausanne, Switzerland
+  email_md5: ad9229e33115ef52e8f00634cbfbdf32
 
 rss_path: feed.xml
 categories_path: categories.html
