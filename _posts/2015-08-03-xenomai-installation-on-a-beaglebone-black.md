@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Xenomai installation on a Beaglebone black
-categories: [Linux]
-tags: [xenomai, installation, beaglebone, beaglebone black, debian]
-fullview: true
+categories: Embedded Linux
+tags: xenomai, beaglebone, debian, ubuntu
 ---
 
 **[Xenomai](http://xenomai.org/)** is a useful tool for running real-time tasks on an embedded Linux platform such as the Beaglebone black.
@@ -26,19 +25,25 @@ There are two ways you can install Xenomai on the Beaglebone black:
 
 I discovered this method thanks to the Debian for Beaglebone black page [^4].
 
-**1. Install Debian on your Beaglebone**
+**1. Install Debian or Ubuntu on your Beaglebone**
 
 If you already have a recent Debian installed on your Beaglebone black, you can skip this step.
 
+For Debian use this image:
 {%highlight bash%}
 wget https://rcn-ee.com/rootfs/bb.org/release/2015-03-01/console/BBB-eMMC-flasher-debian-7.8-console-armhf-2015-03-01-2gb.img.xz
+{%endhighlight%}
+
+For Ubuntu use this image:
+{%highlight bash%}
+wget https://rcn-ee.com/rootfs/2015-05-08/flasher/BBB-eMMC-flasher-ubuntu-14.04.2-console-armhf-2015-05-08-2gb.img.xz
 {%endhighlight%}
 
 Insert your SD card, for me it's under `dev/mmcblk0`
 
 {%highlight bash%}
 sudo -s
-xz -dkc BBB-eMMC-flasher-debian-7.8-console-armhf-2015-03-01-2gb.img.xz > /dev/mmcblk0
+xz -dkc BBB-eMMC-flasher-*.img.xz > /dev/mmcblk0
 exit
 {%endhighlight%}
 
@@ -92,6 +97,8 @@ sudo make install
 **That's it you're done!**
 
 ### Xenomai installation: the hard way (~15 steps)
+
+I have only tested this with Debian.
 
 **1. Installing prerequisites**
 
