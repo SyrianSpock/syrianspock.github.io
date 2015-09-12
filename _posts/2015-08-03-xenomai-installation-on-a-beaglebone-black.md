@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Xenomai installation on a Beaglebone black
-categories: Embedded Linux
-tags: xenomai, beaglebone, debian, ubuntu
+categories: ['Embedded Linux']
+tags: ['xenomai', 'beaglebone black', 'debian', 'ubuntu']
 ---
 
 **[Xenomai](http://xenomai.org/)** is a useful tool for running real-time tasks on an embedded Linux platform such as the Beaglebone black.
