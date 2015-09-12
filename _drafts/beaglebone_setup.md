@@ -13,7 +13,7 @@ What's even greater about this board is it's surprisingly easy to use thanks to 
 All you need to use this board is the mini USB cable that comes with it: it powers it and emulates an ethernet connection over USB.
 
 
-## Choosing a Linux distribution
+## Choosing a Linux distribution, the eternal argument
 
 The choice for a Linux distribution is always subject to discussion.
 The most popular distros on embedded computer boards are Yocto, Angstrom and Debian.
@@ -60,7 +60,7 @@ ssh ubuntu@192.168.7.2
 {%endhighlight%}
 
 
-## Linux, RT-PREEMPT or Xenomai ? The roboticist's dilemma
+## Linux, RT-PREEMPT or Xenomai, the roboticist's dilemma
 
 If you are starting to play with embedded linux platforms and just want to try to build some cool little thing, skip this part.
 If you are trying to build more complex systems that impose constraints on the execution time of your tasks, then read this part.
@@ -75,7 +75,7 @@ I told you the community was great.
 If you want to install Xenomai on your Beaglebone, I suggest you check the section "Xenomai installation: the easy way (3 steps)" of my article [Xenomai installation on a Beaglebone black](http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black.html)
 
 
-## IO setup
+## Slaying Cerberus: IO setup made easy
 
 In the early years of embedded linux, the boards were dark and full of terrors.
 IO configuration was a hell of task that required kernel recompilation.
@@ -152,3 +152,58 @@ The workflow is the following: you setup the IO function using the `config-pin` 
 
 Now you can go write some cool application.
 Unless that's not enough for you.
+
+
+## We need to go higher: installing ROS
+
+Let's say you want to build some little robot with computer vision for navigation.
+You can write your PWM driver to control your motors with the **mraa** library, but how can you do the vision part?
+A few years ago, I would have told you to install **opencv** and work from there.
+But you would most certainly get stuck communication-wise: how do you interface your vision code with the motor controller part.
+It turns out there is a very popular framework out there, in the wild forest of open-source projects, that is awesome at interfacing differents chunks of code that perform different tasks: [ROS](http://ros.org/).
+
+ROS stands for Robot Operating System.
+It's not and OS per se, it's more like a virtual machine that runs on top of Linux.
+In some ways it's similar to **dbus** as it enables inter process communication, but it's safer to use and, I would argue, easier.
+
+Using ROS to build your robotics application also opens the door to use a wide range of nodes written by other people that do can anything from reading a camera to performing SLAM with stereo vision.
+So you may even be able to reuse and tweak some existing code to complete your little robot with vision-aided navigation.
+
+Enough with the talking, here are the installation guidelines as documented on the ROS [wiki](http://wiki.ros.org/indigo/Installation/UbuntuARM)
+
+{%highlight bash%}
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
+
+sudo apt-get update
+sudo apt-get install ros-indigo-ros-base
+
+sudo apt-get install python-rosdep
+sudo rosdep init
+rosdep update
+
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+echo "export DISTRIB_ID=Ubuntu" >> ~/.bashrc
+echo "export DISTRIB_RELEASE=14.04" >> ~/.bashrc
+echo "export DISTRIB_CODENAME=trusty" >> ~/.bashrc
+echo "export DISTRIB_DESCRIPTION="Ubuntu 14.04"" >> ~/.bashrc
+
+sudo apt-get install python-rosinstall
+{%endhighlight%}
+
+Now we need to setup the ROS workspace as documented yet again in the ROS [wiki](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
+
+{%highlight bash%}
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+catkin_init_workspace
+
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+{%endhighlight%}
+
+This gives you the base install which is lightweight enough to fit on the Beaglebone black's 4GB eMMC.
+You can go on and search for ROS packages that may be of interest to your application and look up how to install them and use them.
