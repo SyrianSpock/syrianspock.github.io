@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Xenomai installation on a Beaglebone black
-categories: ['Embedded Linux']
+categories: ['embedded-linux']
 tags: ['xenomai', 'beaglebone black', 'debian', 'ubuntu']
 ---
 
