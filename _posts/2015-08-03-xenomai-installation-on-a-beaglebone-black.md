@@ -21,7 +21,7 @@ There are two ways you can install Xenomai on the Beaglebone black:
 - The hard way which is most flexible but requires patching and recompiling the Linux kernel for the platform
 - The easy way which is less flexible but uses a precompiled kernel with the Xenomai patches
 
-### Xenomai installation: the easy way (3 steps)
+## Xenomai installation: the easy way (3 steps)
 
 I discovered this method thanks to the Debian for Beaglebone black page [^4].
 
@@ -96,7 +96,7 @@ sudo make install
 
 **That's it you're done!**
 
-### Xenomai installation: the hard way (~15 steps)
+## Xenomai installation: the hard way (~15 steps)
 
 I have only tested this with Debian.
 
@@ -115,7 +115,7 @@ The two main drawbacks of this method are:
 * It uses a Debian image from 1.5 years ago (7.5 from early 2014),
 * It takes easily one to a few hours to setup.
 
-### What's next ?
+## What's next ?
 
 You can test Xenomai by running this as root
 
@@ -125,7 +125,7 @@ You can test Xenomai by running this as root
 
 You should get something like this
 
-![Xenomai latency test]({{ site.url }}/assets/media/xeno_latency_test.png)
+![Xenomai latency test](/assets/media/xeno_latency_test.png)
 
 You'll notice the latency and jitter are - as expected and promised - in the order of microseconds.
 Bear in mind that this is just a test and doesn't reflect the performance of Xenomai under high CPU loads.
@@ -134,7 +134,7 @@ We shall test that later.
 You can go on and try other stuff under `/usr/xenomai/bin/`.
 Or you might try using the Xenomai userspace API [^5] to build a real-time application, I know that's one thing I'll be exploring.
 
-### References
+## References
 
 [^1]: Installing Xenomai on Beaglebone using Debian distribution [https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/](https://randomlinuxhacks.wordpress.com/2015/02/22/installing-xenomai-on-beaglebone-using-debian-distribution/)
 

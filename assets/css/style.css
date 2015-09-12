@@ -183,3 +183,9 @@ ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
 
+p img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
