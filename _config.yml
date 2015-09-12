@@ -11,7 +11,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: Saladin's log
+      title: Salah's blog
 
 description: My thoughts and notes about robotics, embedded software and hardware
 author:
