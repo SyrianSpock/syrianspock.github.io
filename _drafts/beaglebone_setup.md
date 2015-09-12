@@ -1,8 +1,8 @@
 ---
 layout: post
 title: My Beaglebone black setup for embedded development
-categories: ['Embedded Linux']
-tags: ['beaglebone', 'ubuntu', 'linux', 'ROS', 'embedded']
+categories: ['embedded-linux']
+tags: ['beaglebone black', 'ubuntu', 'linux', 'ROS', 'embedded', 'xenomai']
 ---
 
 The Beaglebone black is easily my favourite Embedded linux platform.
