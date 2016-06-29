@@ -1,29 +1,21 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
 
-paginate_path: /page:num
-exclude: ["README.md"] # files to exclude
-highlighter: pygments
-markdown: kramdown
+# Permalinks
+permalink:        pretty
 
-defaults:
-  -
-    scope:
-      path: "" # empty string for all files
-    values:
-      title: Salah's blog
+# Setup
+title:            syrianspock.github.io
+tagline:          '[syrianspock.github.io]'
+description:      'A blog about robotics and embedded systems'
+url:              syrianspock.github.io
+baseurl:          /
 
-description: My thoughts and notes about robotics, embedded software and hardware
 author:
-  name: Salah-Eddine Missri
-  email: syrianspock@gmail.com
-  github: syrianspock
-  twitter: syrianspock
-  linkedin: salah-eddine-missri-23874b83
-  bio: Robotics student in Lausanne, Switzerland. Co-founder of WISE Robotics. Eurobot participant with team CVRA.
-  email_md5: ad9229e33115ef52e8f00634cbfbdf32
+  name:           'Salah-Eddine Missri'
+  url:            https://twitter.com/syrianspock
 
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
+paginate:         5
 
-BASE_PATH:
+gems: [jekyll-paginate]
