@@ -1,7 +1,6 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
+paginate_path: /page:num
 exclude: ["README.md"] # files to exclude
 highlighter: pygments
 markdown: kramdown
@@ -18,7 +17,9 @@ author:
   name: Salah-Eddine Missri
   email: syrianspock@gmail.com
   github: syrianspock
-  bio: Amateur roboticist and tinkerer, studying Robotics in Lausanne, Switzerland
+  twitter: syrianspock
+  linkedin: salah-eddine-missri-23874b83
+  bio: Robotics student in Lausanne, Switzerland. Co-founder of WISE Robotics. Eurobot participant with team CVRA.
   email_md5: ad9229e33115ef52e8f00634cbfbdf32
 
 rss_path: feed.xml
