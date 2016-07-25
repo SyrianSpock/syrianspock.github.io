@@ -4,7 +4,12 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">
+       {{ page.date | date_to_string }}
+       {% if page.crosspost_site %}
+       • Crossposted from <a href="{{ page.crosspost_url }}">{{ page.crosspost_site }}</a>.
+       {% endif %}
+  </span>
   {{ content }}
 </div>
 
