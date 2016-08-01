@@ -72,7 +72,7 @@ The best solution being Xenomai although it requires more effort to install.
 On most boards you would need to maintain your own kernel with the Xenomai patch, but luckily for us there is a prepackaged kernel available for the Beaglebone in the official repositories.
 I told you the community was great.
 
-If you want to install Xenomai on your Beaglebone, I suggest you check the section "Xenomai installation: the easy way (3 steps)" of my article [Xenomai installation on a Beaglebone black](http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black.html)[^3]
+If you want to install Xenomai on your Beaglebone, I suggest you check the section "Xenomai installation: the easy way (3 steps)" of my previous article on the subject[^3].
 
 
 ## Slaying Cerberus: IO setup made easy
@@ -218,7 +218,7 @@ Go make some awesome stuff.
 
 [^2]: How fast is fast enough? Choosing between Xenomai and Linux for real-time applications by Dr. Jeremy H.Brown and Brad Martin [https://www.osadl.org/fileadmin/dam/rtlws/12/Brown.pdf](https://www.osadl.org/fileadmin/dam/rtlws/12/Brown.pdf)
 
-[^3]: "Xenomai installation on a Beaglebone black" an article I wrote a month ago [http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black.html](http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black.html)
+[^3]: Xenomai installation on a Beaglebone black [http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black](http://syrianspock.github.io/embedded-linux/2015/08/03/xenomai-installation-on-a-beaglebone-black)
 
 [^4]: Linux device tree documentation on eLinux website [http://elinux.org/Device_Tree](http://elinux.org/Device_Tree)
 
