@@ -2,7 +2,7 @@
 layout: post
 title: Goldorak 2016 post-mortem
 author: Salah
-categories: Eurobot, Embedded Linux, ROS
+categories: ['Eurobot', 'Embedded Linux', 'ROS']
 tags: ['beaglebone black', 'ubuntu', 'linux', 'ROS', 'embedded', 'robotics', 'eurobot']
 crosspost_site: CVRA blog
 crosspost_url: http://www.cvra.ch/blog/2016/goldorak-post-mortem

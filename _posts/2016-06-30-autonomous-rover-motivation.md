@@ -2,7 +2,7 @@
 layout: post
 title: Autonomous Rover&#58 Motivation
 categories: ['Autonomous Rover']
-tags: ['autonomous', 'rover', 'ROS', 'robotics']
+tags: ['autonomous rover', 'ROS', 'robotics']
 ---
 
 When I say rover, you probably think about space rovers, like Yutu or Curiosity.

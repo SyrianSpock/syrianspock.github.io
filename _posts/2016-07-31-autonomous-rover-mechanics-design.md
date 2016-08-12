@@ -2,7 +2,7 @@
 layout: post
 title: Autonomous Rover&#58 Experimenting with mechanical design
 categories: ['Autonomous Rover']
-tags: ['autonomous', 'rover', 'mechanics', 'design', 'robotics', '3d printing']
+tags: ['autonomous rover', 'mechanics', 'design', 'robotics', '3d printing']
 ---
 
 Since my last post about the motivation behind my autonomous rover project[^0], I have been looking with [@romain_bersier](https://twitter.com/romain_bersier) for the mechanical structure that best fits the needs of an autonomous rover.
