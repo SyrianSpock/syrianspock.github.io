@@ -6,9 +6,18 @@ tags: ['robotics', 'space', 'hacker community', 'ccc']
 ---
 
 The Chaos Communication Congress is a 4-day hacker conference/gathering that takes place every year between Christmas and New Year Eve.
-Last week, the 33th edition, aka 33C3, took place on December 27-30.
+Last week, the 33th edition, aka 33C3, took place on December 27-30 in Hamburg.
 
-![33C3]()
+<figure>
+    <img src="/images/33c3.jpg" alt="33C3">
+    <figcaption>
+        <center>
+            <small>
+                Entry of 33C3 at the Congress Centrum Hamburg, picture courtesy of <a href="http://www.spiegel.de/netzwelt/netzpolitik/33c3-hackerkongress-des-chaos-computer-clubs-startet-in-hamburg-a-1127496.html">Spiegel</a>.
+            </small>
+        </center>
+    </figcaption>
+</figure>
 
 Several conference tracks are available during the four days, with various subjects ranging from technical talks about Security, Hardware, and Science to political talks about Art, Ethics, and Society.
 One category that has been growing the last few years is Space.
