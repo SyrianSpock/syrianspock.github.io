@@ -10,12 +10,14 @@ title:            syrianspock.github.io
 tagline:          '[syrianspock.github.io]'
 description:      'A blog about robotics and embedded systems'
 url:              syrianspock.github.io
-baseurl:          /
+baseurl:          '/'
 
 author:
   name:           'Salah Missri'
   url:            https://twitter.com/syrianspock
 
-paginate:         5
+exclude: [README.md, .bundle, bin, vendor, Gemfile, Gemfile.lock, Rakefile, s3_website.yml, .last_optimized]
 
-gems: [jekyll-paginate, jekyll-feed]
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
