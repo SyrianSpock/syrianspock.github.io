@@ -3,9 +3,11 @@ layout: page
 title: About me
 ---
 
-I am a robotics student at EPFL, Switzerland.
-Co-founder of [WISE Robotics](http://wise-robotics.com).
-I compete in Eurobot with team [CVRA](http://cvra.ch).
+I am a software engineer currently working in photogrammetry and computer vision.<br>
+Alumni of EPFL (Swiss Federal Institute of Technology in Lausanne, Switzerland).
 
-You can also find me on [Github](https://github.com/syrianspock).
-You can contact me via [Twitter](https://twitter.com/syrianspock) or [email](syrianspock@gmail.com).
+Member of swiss [Eurobot](http://www.eurobot.org/) team [CVRA](http://cvra.ch), responsible for software and integration.<br>
+Also co-founder of [WISE Robotics](http://wise-robotics.com).
+
+You can also find me on [Github](https://github.com/syrianspock).<br>
+Or can contact me via [Twitter](https://twitter.com/syrianspock) or [email](syrianspock@gmail.com).
