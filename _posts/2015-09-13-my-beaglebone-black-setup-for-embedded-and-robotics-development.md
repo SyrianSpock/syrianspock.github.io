@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Beaglebone black setup for embedded and robotics development
-categories: ['Embedded Linux']
+categories: ['Embedded Linux', 'Software']
 tags: ['beaglebone black', 'ubuntu', 'linux', 'ROS', 'embedded', 'robotics', 'xenomai']
 ---
 
