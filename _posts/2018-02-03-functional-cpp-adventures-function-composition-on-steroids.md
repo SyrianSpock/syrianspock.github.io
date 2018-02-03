@@ -110,11 +110,11 @@ There is too much noise introduced by the use of `optional`, and noise builds up
 In Haskell, this problem could be solved by writing the following:
 
 ```hs
-inverse :: (Eq a, Fractional a) => a -> Maybe a
+inverse :: Float -> Maybe Float
 inverse 0 = Nothing
 inverse x = Just(1 / x)
 
-arcsine :: (Ord a, Floating a) => a -> Maybe a
+arcsine :: Float -> Maybe Float
 arcsine x
     | -1 <= x && x <= 1 = Just(asin x)
     | otherwise         = Nothing
