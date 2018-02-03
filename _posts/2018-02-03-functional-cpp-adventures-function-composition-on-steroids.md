@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adventures in functional C++&#58 monadic composition
+title: Adventures in functional C++&#58 function composition on steroids
 categories: ['Functional programming', 'Software']
 tags: ['c++', 'cpp', 'functional', 'programming', 'linux']
 ---
@@ -10,9 +10,9 @@ tags: ['c++', 'cpp', 'functional', 'programming', 'linux']
 </script>
 
 [In the previous post](/functional%20programming/software/2018/01/22/functional-cpp-adventures-optional/), we discussed the optional idiom introduced to C++ starting from C++17.
-Although `optional` is not implemented as a monad in C++, we can treat it as such and try to apply monadic composition.
+Although `optional` is not implemented as a monad in C++, we can treat it as such and implement the missing parts to achieve greater function composition.
 
-> But what is monadic composition?
+> But what is a monad?
 
 For the purpose of this article, think about monads as a design pattern that allows us to:
 
@@ -25,6 +25,7 @@ This pattern is powerful as it enables better function composition, you'll see w
 Many functions we write in our code can fail.
 [We saw previously](/functional%20programming/software/2018/01/22/functional-cpp-adventures-optional/) how three patterns can be used to express failure.
 Here we will focus on the solution involving `optional` because `optional` already allows us to define types, so that fulfills the first element in the description of the monad pattern I gave above.
+Let's see how we can build up the other two missing elements of the monad pattern.
 
 # Toy problem
 
@@ -40,7 +41,7 @@ $$
 You might ask yourself why on earth would do we need to compute such an evil function that is only valid for non-zero numbers between -1 and 1?
 Well.. life is unfair, get over it.
 
-One approach to implementing this would be using a single function, and that would look like this
+One approach to implementing this would be using a single function:
 
 ```cpp
 std::optional<double> my_single_function(double x)
@@ -50,12 +51,34 @@ std::optional<double> my_single_function(double x)
 }
 ```
 
-And that looks fine.
+and that looks fine.
 
 # Breaking it down
 
-For the sake of discussion, let's say I'm writing a math library and would like to reuse each building block (arcsine, square root, and inverse) with safe input domain checks.
-The function can then be split like this
+For the sake of discussion, let's assume I'm writing a math library and would like to reuse each building block (arcsine and inverse) with safe input domain checks.
+The function can be defined as the composition of two functions, the inverse and the arcsine:
+
+$$
+\begin{align*}
+  inverse \colon \mathbb{R}^* &\to \mathbb{R}\\
+  x &\mapsto \frac{1}{x}
+\end{align*}
+$$
+
+$$
+\begin{align*}
+  arcsine \colon x \in [-1, 1] &\to \mathbb{R}\\
+  x &\mapsto \arcsin{x}
+\end{align*}
+$$
+
+$$
+\begin{align*}
+  f = inverse \circ arcsine
+\end{align*}
+$$
+
+The implementation can be broken down to reflect this:
 
 ```cpp
 std::optional<double> inverse(double x)
@@ -80,9 +103,9 @@ std::optional<double> my_function(double x)
 Well that looks uglier and less efficient.
 We introduced smaller building blocks which makes the code more modular, but function composition sucks.
 The return value of the first call to `inverse` needs to be checked, and only if it contains some value do we feed it to the following call to `arcsine`.
-There is too much noise introduced by the use of `optional`, what can we do about it?
+There is too much noise introduced by the use of `optional`, and noise builds up as we chain functions, what can we do about it?
 
-# Monadic composition
+# Bind operator in Haskell
 
 In Haskell, this problem could be solved by writing the following:
 
@@ -105,7 +128,7 @@ Functions can be chained easily and if some step fails, the failure propagates t
 
 # Bind operator in C++
 
-We can implement the bind operator for `optional`, one way to do it is:
+We can implement the bind operator for `optional` like this:
 
 ```cpp
 template <typename T, typename funcType>
@@ -127,14 +150,14 @@ std::optional<double> my_function(double x)
 
 which looks a lot like Haskell.
 With the bind operator we can achieve more efficient function composition using the `optional` idiom.
-This fulfills the 2 last elements of the description of the monad pattern I gave above.
+This fulfills the 2 last elements of the monad pattern as defined above.
 
 # Summary
 
 Monads are a very powerful pattern that brings function composition to the next level.
 Implementing the bind operator is crucial in using the monad pattern in C++.
 This is clearly not perfect, and mostly an attempt to understand how the monad pattern can make C++ code more readable and maintainable.
-A few interesting things to try next are
+A few interesting things to try next are:
 
 - implementing more syntactic sugar (an equivalent to the [do notation in Haskell](https://en.wikibooks.org/wiki/Haskell/do_notation)),
-- defining the bind operator for other templated types in C++.
+- defining the bind operator for other templated types in C++ such as `std::variant`.
