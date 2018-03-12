@@ -38,7 +38,7 @@ $$
 \end{align*}
 $$
 
-You might ask yourself why on earth would do we need to compute such an evil function that is only valid for non-zero numbers between -1 and 1?
+You might ask yourself why on Earth would do we need to compute such an evil function that is only valid for non-zero numbers between -1 and 1?
 Well.. life is unfair, get over it.
 
 One approach to implementing this would be using a single function:
