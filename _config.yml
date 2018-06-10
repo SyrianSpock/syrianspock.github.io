@@ -6,10 +6,10 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            syrianspock.github.io
-tagline:          '[syrianspock.github.io]'
-description:      'A blog about robotics, software, and embedded systems'
-url:              syrianspock.github.io
+title:            syrianspock.com
+tagline:          '[syrianspock.com]'
+description:      'A blog about robotics and software'
+url:              syrianspock.com
 baseurl:          '/'
 
 author:
