@@ -3,13 +3,14 @@ layout: post
 title: Opinion&#58 AI is dead, long live Software!
 categories: ['Software', 'Opinion']
 tags: ['functional', 'programming', 'machine learning']
+image: /images/John-McCarthy.jpg
 ---
 
 "As soon as it works, no one calls it AI any more." John McCarthy
 
 <figure>
     <center>
-    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2011/10/31/20/48-John-McCarthy-AP.jpg?w968h681" alt="John McCarthy (1927-2011), the father of AI">
+    <img src="/images/John-McCarthy.jpg" alt="John McCarthy (1927-2011), the father of AI">
     <figcaption>
         <small>John McCarthy (1927-2011), the father of AI</small>
     </figcaption>
