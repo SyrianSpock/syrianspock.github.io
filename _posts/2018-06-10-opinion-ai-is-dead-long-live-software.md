@@ -58,6 +58,14 @@ We realized that deeper networks are harder to train, so we started propagating 
 Then, we went for wider layers (see [Wide ResNet](https://arxiv.org/pdf/1605.07146.pdf)).
 What's next? [Stacking networks](https://arxiv.org/pdf/1805.08559.pdf)? [Capsule networks](https://arxiv.org/pdf/1710.09829.pdf)? [Geometric deep learning](https://arxiv.org/pdf/1611.08097.pdf)? [Bayesian deep learning](http://bayesiandeeplearning.org/)?
 
+- ML models are hard to debug.
+When classical software fails, we can step through the code, and try to make sense of the execution path, looking for the root cause.
+When an ML model fails, good luck stepping through the layers.
+The field still needs to mature before efficient debugging strategies develop.
+
+- Recent research suggests that most papers are [overfitting standard datasets](https://arxiv.org/pdf/1806.00451.pdf).
+Which means these models don't generalize as well as we might think.
+
 - Current ML models lack the ability to handle uncertainty.
 This is why some advocate for Bayesian approaches to deep learning (see [Alex Kendall's blog on the subject](https://alexgkendall.com/computer_vision/bayesian_deep_learning_for_safe_ai/)).
 
