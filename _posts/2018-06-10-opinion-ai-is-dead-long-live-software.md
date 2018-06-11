@@ -33,6 +33,8 @@ The public got disinterested and funding to research became scarce.
 Now the early signs of an imminent winter are revealing, see [Piękniewski's blog "AI winter is well on its way"](https://blog.piekniewski.info/2018/05/28/ai-winter-is-well-on-its-way/).
 
 # The elephant in the room
+_Disclaimer: By Machine Learning I mean Deep Learning and other recent derivatives (e.g. Wide Learning), not to be confused with statistical learning which forms the older chunk of Machine Learning algorithms (Linear Regression, Support Vector Machines, etc)._
+
 Machine Learning is often depicted as the silver bullet to solve all problems.
 I'm sorry to tell you it's not.
 As with any technology, there are pros and cons.
