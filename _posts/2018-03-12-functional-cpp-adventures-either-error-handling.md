@@ -202,7 +202,7 @@ Either<std::string, double> f(double x)
 ```
 
 Now that makes it more readable IMO.
-You see the two functions `oneOver` and `squareRoot` being chained, and are not bothered by the lower lever things going one with the `Either` type.
+You see the two functions `oneOver` and `squareRoot` being chained, and are not bothered by the lower lever things going on with the `Either` type.
 
 # Summary
 
