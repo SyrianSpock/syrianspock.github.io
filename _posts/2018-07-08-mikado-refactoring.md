@@ -3,11 +3,11 @@ layout: post
 title: Refactoring&#58 Mikado, a powerful tool
 categories: ['Software']
 tags: ['software', 'programming', 'tools', 'refactoring']
-image: /images/mikado/mikado.png
+image: /images/mikado/mikado.jpg
 ---
 
 <center>
-    <img src="/images/mikado/mikado.png" alt="We've all seen code bases that look like this">
+    <img src="/images/mikado/mikado.jpg" alt="We've all seen code bases that look like this">
     <figcaption>
         <small>We've all seen code bases that look like this :(</small>
     </figcaption>
