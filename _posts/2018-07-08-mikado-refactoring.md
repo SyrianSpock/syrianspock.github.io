@@ -3,7 +3,7 @@ layout: post
 title: Refactoring&#58 Mikado, a powerful tool
 categories: ['Software']
 tags: ['software', 'programming', 'tools', 'refactoring']
-image: /images/mikado/mikado.jpg
+image: /images/mikado/mikado.png
 ---
 
 <center>
