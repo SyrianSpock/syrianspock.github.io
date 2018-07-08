@@ -6,75 +6,75 @@ struct DivisionResult {
     int remainder;
 };
 
-struct Data {
-    struct {
-        int a;
-        int b;
-    } in;
-    struct {
-        int mul;
-        std::optional<DivisionResult> div;
-    } out;
+struct UserInput {
+    int a;
+    int b;
 };
 
-std::optional<Data> parse_inputs(int argc, char** argv)
+struct Output {
+    int mul;
+    std::optional<DivisionResult> div;
+};
+
+std::optional<UserInput> parse_inputs(int argc, char** argv)
 {
     if (argc != 3) {
         return {};
     }
 
-    Data p;
-    p.in.a = atoi(argv[1]);
-    p.in.b = atoi(argv[2]);
-    return p;
+    UserInput in;
+    in.a = atoi(argv[1]);
+    in.b = atoi(argv[2]);
+    return in;
 }
 
-int multiply(const Data& p)
+int multiply(const int a, const int b)
 {
-    return p.in.a * p.in.b;
+    return a * b;
 }
 
-bool is_zero(const Data& p)
+std::optional<DivisionResult> divide(const int a, const int b)
 {
-    return p.in.b == 0;
+    if (b == 0) return {};
+    else        return DivisionResult{a / b, a % b};
 }
 
-std::optional<DivisionResult> divide(const Data& p)
+Output run_computation(const UserInput& input)
 {
-    if (is_zero(p)) return {};
-    else            return DivisionResult{p.in.a / p.in.b, p.in.a % p.in.b};
+    Output out;
+    out.mul = multiply(input.a, input.b);
+    out.div = divide(input.a, input.b);
+    return out;
 }
 
-Data run_computation(Data p)
+bool all_successful(const Output& res)
 {
-    p.out.mul = multiply(p);
-    p.out.div = divide(p);
-    return p;
+    return bool(res.div);
 }
 
-bool all_successful(const Data& p)
-{
-    return bool(p.out.div);
-}
-
-int show_results(const Data& p)
+void show_inputs(const UserInput& in)
 {
     std::cout << "Inputs:" << std::endl;
-    std::cout << "  a: " << p.in.a << std::endl;
-    std::cout << "  b: " << p.in.b << std::endl;
+    std::cout << "  a: " << in.a << std::endl;
+    std::cout << "  b: " << in.b << std::endl;
+}
+
+void show_outputs(const Output& out)
+{
     std::cout << "Outputs:" << std::endl;
-    std::cout << "  mul: " << p.out.mul << std::endl;
+    std::cout << "  mul: " << out.mul << std::endl;
     std::cout << "  div: " << std::endl;
-    std::cout << "    quotient: " << p.out.div.value().quotient << std::endl;
-    std::cout << "    remainder: " << p.out.div.value().remainder << std::endl;
-    return all_successful(p) ? 0 : 1;
+    std::cout << "    quotient: " << out.div.value().quotient << std::endl;
+    std::cout << "    remainder: " << out.div.value().remainder << std::endl;
 }
 
 int main(int argc, char** argv)
 {
     if (auto input = parse_inputs(argc, argv)) {
-        auto output = run_computation(input.value());
-        return show_results(output);
+        auto result = run_computation(input.value());
+        show_inputs(input.value());
+        show_outputs(result);
+        return all_successful(result) ? 0 : 1;
     } else {
         std::cout << "Usage: add <int:a> <int:b>" << std::endl;
         return 1;
