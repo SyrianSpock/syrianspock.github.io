@@ -1,0 +1,7 @@
+_ Remove Data coupling
+    _ Remove Data from parse_inputs()
+    _ Remove Data from run_computation()
+        _ Remove Data from multiply()
+        _ Remove Data from divide()
+            _ Remove Data from is_zero()
+    _ Remove Data from show_results()
