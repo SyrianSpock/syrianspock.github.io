@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adventures in functional C++&#58 either error handling
+title: Functional Programming in C++&#58 Error handling
 categories: ['Functional programming', 'Software']
 tags: ['c++', 'cpp', 'functional', 'programming', 'linux']
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adventures in functional C++&#58 function composition on steroids
+title: Functional Programming in C++&#58 Composition
 categories: ['Functional programming', 'Software']
 tags: ['c++', 'cpp', 'functional', 'programming', 'linux']
 ---

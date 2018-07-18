@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adventures in functional C++&#58 optional
+title: Functional Programming in C++&#58 Optional
 categories: ['Functional programming', 'Software']
 tags: ['c++', 'cpp', 'functional', 'programming', 'linux']
 ---
