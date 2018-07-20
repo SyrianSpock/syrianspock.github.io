@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Autonomous Rover&#58 Experimenting with mechanical design
+title: Autonomous Rover&#58 Mechanical design
 categories: ['Autonomous Rover']
 tags: ['autonomous rover', 'mechanics', 'design', 'robotics', '3d printing']
 ---
