@@ -18,6 +18,6 @@ author:
 
 exclude: [README.md, .bundle, bin, vendor, Gemfile, Gemfile.lock, Rakefile, s3_website.yml, .last_optimized]
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
