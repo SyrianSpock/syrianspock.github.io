@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From git submodule to subtree, road to monorepo
+title: From git submodule to subtree, rocky road to monorepo
 categories: ['Software']
 tags: ['software', 'programming', 'tools']
 ---
