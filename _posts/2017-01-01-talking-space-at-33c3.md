@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CCC&#58 Space, the final frontier at 33C3
-categories: ['Space']
+categories: ['Conference']
 tags: ['robotics', 'space', 'hacker community', 'ccc']
 ---
 
