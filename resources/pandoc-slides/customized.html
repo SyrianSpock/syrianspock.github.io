@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Some slides</title>
+
+    <meta name="description" content="Some slides">
+
+          <meta name="author" content="John Smith" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+    <style type="text/css">
+      section.level2 > h2 {font-size: 125%;}
+      section.level1 > h2 {font-size: 150%;}
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: table-cell; vertical-align: middle; text-align: center; margin: auto;}
+    </style>
+          <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+    
+    <!-- For syntax highlighting -->
+          <link rel="stylesheet" href="https://revealjs.com/lib/css/zenburn.css">
+    
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="https://revealjs.com/css/print/' +
+        ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) +
+        '.css" type="text/css" media="print">' );
+    </script>
+
+      </head>
+
+  <body>
+    
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h3>Some slides</h3>
+                      <h4>John Smith</h4>
+                    <p>
+            <h5>01.01.1970</h5>
+          </p>
+        </section>
+
+        
+        <section id="section" class="level1">
+        <h1></h1>
+        <section id="lets-start-a-section" class="level2">
+        <h2>Let’s start a section</h2>
+        </section>
+        <section id="then-put-subsections" class="level2">
+        <h2>Then put subsections</h2>
+        <p>with some text</p>
+        </section>
+        </section>
+        <section id="section-1" class="level1">
+        <h1></h1>
+        <section id="start-a-new-section" class="level2">
+        <h2>Start a new section</h2>
+        </section>
+        <section id="make-a-list" class="level2">
+        <h2>Make a list</h2>
+        <ul>
+        <li>of items</li>
+        <li>that have no meaning</li>
+        <li>or coherence</li>
+        <li>with <strong>bold text</strong></li>
+        <li>or <em>emphasized text</em></li>
+        </ul>
+        </section>
+        <section id="show-pictures" class="level2">
+        <h2>Show pictures</h2>
+        <figure>
+        <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" alt="Wikipedia FTW" /><figcaption>Wikipedia FTW</figcaption>
+        </figure>
+        <p>from local path or from the internet</p>
+        </section>
+        </section>
+        <section id="section-2" class="level1" data-background-image="https://upload.wikimedia.org/wikipedia/commons/e/ea/Thats_all_folks.svg">
+        <h1></h1>
+        </section>
+      </div>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://revealjs.com/lib/js/head.min.js"></script>
+      <script src="https://revealjs.com/js/reveal.js"></script>
+
+      <script>
+        jQuery('section').removeAttr('id');
+        jQuery('section[target]')
+          .map(function(i, el) {
+            jQuery(el).find(el.attributes.target.value)
+              .map(function() {
+                jQuery(this).addClass('fragment ' + el.attributes['data-fragment'].value)
+              });
+          });
+        jQuery('section[data-bg_color]')
+          .map(function(i, el) {
+            jQuery(el).attr('data-background', el.attributes['data-bg_color'].value);
+          });
+      </script>
+
+      <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          // Push each slide change to the browser history
+          history: true,
+
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+            { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+          ]
+        });
+      </script>
+    </div>
+  </body>
+</html>
