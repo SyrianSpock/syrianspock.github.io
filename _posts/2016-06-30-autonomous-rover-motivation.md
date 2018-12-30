@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Autonomous Rover&#58 Motivation
-categories: ['Autonomous Rover']
+categories: ['Robotics']
 tags: ['autonomous rover', 'ROS', 'robotics']
 ---
 

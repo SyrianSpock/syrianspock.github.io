@@ -2,7 +2,7 @@
 layout: post
 title: Building a ROS-enabled robot for Eurobot
 author: Salah
-categories: ['Eurobot', 'Embedded Linux', 'ROS', 'Software']
+categories: ['Eurobot', 'Embedded Linux', 'ROS', 'Software', 'Robotics']
 tags: ['beaglebone black', 'ubuntu', 'linux', 'ROS', 'embedded', 'robotics', 'eurobot']
 crosspost_site: CVRA blog
 crosspost_url: http://www.cvra.ch/blog/2016/goldorak-post-mortem
