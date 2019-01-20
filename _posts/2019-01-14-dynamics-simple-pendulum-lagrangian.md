@@ -129,7 +129,7 @@ We end up with the same equation of motion previously computed using Newtonian m
 Now this is all fun and simple, but what happens for a more complex system?
 Say a double or a triple pendulum?
 Well.. things are simpler in Langrange's world, but it's still a long and dull process of deriving expressions by hand.
-Surely we can make computers make some of the work, if not most of it.
+Surely we can make computers do some of the work, if not most of it.
 Haven't you heard of [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation), can't we use that?
 Sadly not with the Lagrangian approach, because of the explicit time derivative in the Euler-Lagrange equation.
 Remember that our generalized coordinate $q$ and their associated time derivatives $\dot{q}$ are both functions of time: $q = q(t)$ and $\dot{q} = \dot{q}(t)$.
