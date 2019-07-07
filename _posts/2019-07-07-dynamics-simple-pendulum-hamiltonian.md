@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Robot Dynamics&#58 Hamiltonian formalism &#38; Automatic differentiation
+title: Robot Dynamics&#58 Hamiltonian formalism &#38; AutoDiff
 categories: ['Robotics']
-tags: ['robotics', 'dynamics', 'mathematics', 'hamiltonian mechanics', 'automatic differentiation']
+tags: ['robotics', 'dynamics', 'mathematics', 'hamiltonian mechanics', 'automatic differentiation', 'AutoDiff']
 math: true
 ---
 
