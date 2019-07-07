@@ -122,7 +122,7 @@ $$
 
 ...and tadam!
 That looks familiar.
-We end up with the same equation of motion previously computed using Newtonian mechanics in the [first episode of this series](robotics/2018/12/29/dynamics-simple-pendulum/).
+We end up with the same equation of motion previously computed using Newtonian mechanics in the [first episode of this series](/robotics/2018/12/29/dynamics-simple-pendulum/).
 
 # But does it scale?
 
