@@ -65,20 +65,14 @@ Mixing it all together we end up with
 
 $$
 J_f(q) =
-\begin{bmatrix}
-\sum_{1}^{N}{l_i \dot{\theta_i} \sin{\theta_i}} \\
-\sum_{1}^{N}{- l_i \dot{\theta_i} \cos{\theta_i}} \\
-\end{bmatrix}
+\nabla_{q}{f(q)}
 $$
 
 - and the associated Hessian by one more AD step:
 
 $$
 H_f(q) =
-\begin{bmatrix}
-\sum_{1}^{N}{- l_i \dot{\theta_i}^2 \cos{\theta_i}} \\
-\sum_{1}^{N}{- l_i \dot{\theta_i}^2 \sin{\theta_i}} \\
-\end{bmatrix}
+\nabla^2_{q}{f(q)}
 $$
 
 - from that we can derive the evolution of the momentum of our system over time:
