@@ -134,7 +134,7 @@ Haven't you heard of [automatic differentiation](https://en.wikipedia.org/wiki/A
 Sadly not with the Lagrangian approach, because of the explicit time derivative in the Euler-Lagrange equation.
 Remember that our generalized coordinate $q$ and their associated time derivatives $\dot{q}$ are both functions of time: $q = q(t)$ and $\dot{q} = \dot{q}(t)$.
 
-In the next episode, we'll dive into Hamilton's improvement on Lagrange's approach and see how we can leverage it to compute the equations of motion of any system with a minimal set of input expressions defining it.
+In the [next episode](/robotics/2019/07/07/dynamics-simple-pendulum-hamiltonian/), we'll dive into Hamilton's improvement on Lagrange's approach and see how we can leverage it to compute the equations of motion of any system with a minimal set of input expressions defining it.
 
 ## References
 
