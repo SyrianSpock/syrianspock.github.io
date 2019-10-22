@@ -4,7 +4,7 @@ I have been diagnosed with a [glioblastoma](https://en.wikipedia.org/wiki/Gliobl
 
 # Coping with mortality
 
-At age 26 you usually think yourself immortal and xpect only to die after you have seen your children and grandchildren grow up.
+At age 26 you usually think yourself immortal and expect only to die after you have seen your children and grandchildren grow up.
 In front of this adversity my faith has only grown stronger.
 Now I realize the hardest part of dying would be leaving all my loved ones behind, so I fight also for them.
 
